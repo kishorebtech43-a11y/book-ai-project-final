@@ -38,7 +38,7 @@ A full-stack AI-powered web application that allows users to explore books and a
 
 
 ### 📚 API Response
-<img width="912" height="542" alt="Screenshot 2026-04-16 131555" src="https://github.com/user-attachments/assets/c724d5a1-b936-4329-a040-c145a88f8ca3" />
+<img width="754" height="674" alt="Screenshot 2026-04-16 134230" src="https://github.com/user-attachments/assets/1ba632b5-e987-4aba-9b75-c84203db73c7" />
 
 
 ---
