@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     
     'rest_framework',
     'books',
@@ -50,6 +51,19 @@ MIDDLEWARE = [
 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+=======
+    'corsheaders',
+    
+    'rest_framework',
+    'books',
+]
+
+MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+>>>>>>> 663b29507509cf1a86de88479c843ea8b6e83afb
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -113,12 +127,22 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
+<<<<<<< HEAD
 CORS_ALLOW_ALL_ORIGINS = True
 
+=======
+>>>>>>> 663b29507509cf1a86de88479c843ea8b6e83afb
 USE_I18N = True
 
 USE_TZ = True
 
+<<<<<<< HEAD
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
+=======
+CORS_ALLOW_ALL_ORIGINS = True
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/6.0/howto/static-files/
+
+>>>>>>> 663b29507509cf1a86de88479c843ea8b6e83afb
 STATIC_URL = 'static/'
