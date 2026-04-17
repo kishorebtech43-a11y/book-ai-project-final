@@ -1,20 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function App() {
-  const [books, setBooks] = useState([]);
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
 
-  // Fetch books from backend
-  useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/books/")
-      .then((res) => res.json())
-      .then((data) => setBooks(data));
-  }, []);
-
-  // Ask question
   const askQuestion = async () => {
-    const res = await fetch("http://127.0.0.1:8000/api/ask/", {
+    const response = await fetch("https://book-ai-project-final.onrender.com//ask", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -22,34 +13,26 @@ function App() {
       body: JSON.stringify({ question }),
     });
 
-    const data = await res.json();
+    const data = await response.json();
     setAnswer(data.answer);
   };
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>📚 Book Intelligence Platform</h1>
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>📚 Book AI Project</h1>
 
-      <h2>Books</h2>
-      <ul>
-        {books.map((book) => (
-          <li key={book.id}>
-            <b>{book.title}</b> - {book.genre}
-          </li>
-        ))}
-      </ul>
-
-      <h2>Ask a Question</h2>
       <input
         type="text"
+        placeholder="Ask about a book..."
         value={question}
         onChange={(e) => setQuestion(e.target.value)}
-        placeholder="Ask something..."
-        style={{ width: "300px", padding: "5px" }}
+        style={{ padding: "10px", width: "300px" }}
       />
+
+      <br /><br />
+
       <button onClick={askQuestion}>Ask</button>
 
-      <h3>Answer:</h3>
       <p>{answer}</p>
     </div>
   );
