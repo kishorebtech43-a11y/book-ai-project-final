@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from .models import Book
 from openai import OpenAI
 
-client = OpenAI(api_key="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")
+client = OpenAI()
 
 def generate_summary(text):
     return f"This book titled '{text}' explores key themes and ideas. It provides engaging content and insights for readers."
