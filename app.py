@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Book AI Project Running!"
+    return "<h1>📚 Book AI Project is Live!</h1><p>Backend deployed successfully 🚀</p>"
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
